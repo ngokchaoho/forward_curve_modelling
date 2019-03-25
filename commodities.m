@@ -54,16 +54,18 @@ for a=1:2
         for c=1:2
             %again as T1-t and T2-t are the same
             M3=w(a)*w(b)*w(c)*F_zero(a)*F_zero(b)*F_zero(c) ...
-                *exp(sigma_t*rho*t*3*psi(a,b))
+                *exp(sigma_t*rho*t*3*psi(a,b));
         end
     end
 end
 
 skew=(M3-3*M2*M1+2*M1^3)/((M2-M1^2)^1.5);
-
+i=1;
+if skew<0
+  i=-1;
+end
 %skew>0,price>0->lognormal distribution
-%½â·½³ÌµÃ³ösigma,mºÍtau
-sigma_bs=fsolve(@(sigma_bs)(exp(sigma_bs^2)+2)*(exp(sigma_bs^2)-1)^0.5-skew,1);
+sigma_bs=fsolve(@(sigma_bs)(i)*(exp(sigma_bs^2)+2)*(exp(sigma_bs^2)-1)^0.5-skew,1);
 m=fsolve(@(m)(M2-M1^2-exp(2*m)*exp(sigma_bs^2)*(exp(sigma_bs^2)-1)),1);
 tau=fsolve(@(tau)(tau+exp(m+0.5*sigma_bs^2)-M1),1);
 

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1553105209000.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7952644",
+    "lastKnownWriteTime" : 1553184864,
+    "last_content_update" : 1553184864592,
+    "path" : "~/Desktop/future_calibration_pca/data_matrix.R",
+    "project_path" : "data_matrix.R",
+    "properties" : {
+        "cursorPosition" : "64,15",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

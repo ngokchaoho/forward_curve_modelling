@@ -79,7 +79,7 @@ delta = NULL
 
 for (i in 1:length(unique_period)) 
   amount[i] = nrow(filtered_groupped[[i]])
-tau = seq(7,10,by = 1)
+tau = seq(14,17,by = 1)
 #assumed delta t = 1
 for (i in 1:length(tau)){
   delta=cbind(delta,filtered_groupped[[tau[i]]]$ln_diff[1:12]/1)

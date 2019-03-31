@@ -36,7 +36,7 @@ for (i in 1:length(unique_period))
 tau = seq(5,8,by = 1)
 #assumed delta t = 1
 for (i in 1:length(tau)){
-  delta=cbind(delta,filtered_groupped[[tau[i]]]$ln_diff[1:9]/1)
+  delta=cbind(delta,filtered_groupped[[tau[i]]]$ln_diff[1:4]/1)
 }
 c = cov(delta)
 result=eigen(c)
@@ -82,7 +82,7 @@ for (i in 1:length(unique_period))
 tau = seq(14,17,by = 1)
 #assumed delta t = 1
 for (i in 1:length(tau)){
-  delta=cbind(delta,filtered_groupped[[tau[i]]]$ln_diff[1:12]/1)
+  delta=cbind(delta,filtered_groupped[[tau[i]]]$ln_diff[1:4]/1)
 }
 c = cov(delta)
 result=eigen(c)
